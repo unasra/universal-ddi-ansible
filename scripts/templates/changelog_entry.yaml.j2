@@ -1,0 +1,36 @@
+  {{ version }}:
+    changes:
+      release_summary: '{{ release_summary }}'
+{% if module_updates %}
+      module_updates:
+{% for entry in module_updates %}
+      - {{ entry }}
+{% endfor %}
+{% endif %}
+{% if bugfixes %}
+      bugfixes:
+{% for entry in bugfixes %}
+      - {{ entry }}
+{% endfor %}
+{% endif %}
+{% if documentation %}
+      documentation:
+{% for entry in documentation %}
+      - {{ entry }}
+{% endfor %}
+{% endif %}
+{% if maintenance %}
+      maintenance:
+{% for entry in maintenance %}
+      - {{ entry }}
+{% endfor %}
+{% endif %}
+{% if new_modules %}
+    modules:
+{% for module in all_modules %}
+    - description: {{ module.description }}
+      name: {{ module.name }}
+      namespace: ''
+{% endfor %}
+{% endif %}
+    release_date: '{{ release_date }}'

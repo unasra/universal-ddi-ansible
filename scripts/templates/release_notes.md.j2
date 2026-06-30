@@ -1,0 +1,42 @@
+# v{{ version }} ({{ date }})
+
+{{ release_summary }}
+{% if new_modules %}
+
+### New Modules
+{% for category, modules in new_modules.items() %}
+
+#### {{ category }}
+{% for module in modules %}
+`infoblox.universal_ddi.{{ module.name }}`: {{ module.description }}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% if module_updates %}
+
+### Updated Modules
+{% for entry in module_updates %}
+- {{ entry }}
+{% endfor %}
+{% endif %}
+{% if bugfixes %}
+
+### Bug Fixes
+{% for entry in bugfixes %}
+- {{ entry }}
+{% endfor %}
+{% endif %}
+{% if documentation %}
+
+### Documentation
+{% for entry in documentation %}
+- {{ entry }}
+{% endfor %}
+{% endif %}
+{% if maintenance %}
+
+### Maintenance
+{% for entry in maintenance %}
+- {{ entry }}
+{% endfor %}
+{% endif %}
