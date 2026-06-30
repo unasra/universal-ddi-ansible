@@ -229,3 +229,141 @@ releases:
       name: ipam_federation_federated_realm_info
       namespace: ''
     release_date: '2025-04-29'
+  1.0.0:
+    changes:
+      release_summary: 'This release introduces a wide range of new modules, including support for DTC, IPAM Federation, DHCP, and Anycast configurations. It also includes enhancements to existing modules, bug fixes, and updates to documentation and CI workflows.'
+
+      module_updates:
+
+      - Added tag filter support for `next_available_ip_info` (#31)
+
+      - Modified test cases for `next_available_subnet_info` (#45)
+
+      - Refactored logic for `next_available_address_block` to improve modularity (#37)
+
+      - Updated `modules.py` to enhance change detection for lists and dictionaries (#36)
+
+      - Improved examples for DNS and DHCP Host modules (#40)
+
+      - Minor corrections to `anycast_host` module, including required attributes and read-only fields (#42)
+
+
+
+      bugfixes:
+
+      - Fixed authentication handling in DNS modules (#2, #28)
+
+
+
+      documentation:
+
+      - Updated installation guide and added debugging information to README (#1, #19)
+
+      - Updated README to include a link to Ansible Galaxy documentation (#9)
+
+      - Updated `dns_record` documentation to remove extraneous commas (#50)
+
+      - Documentation corrections for UDDI Ansible (#39)
+
+
+
+      maintenance:
+
+      - Upgraded universal-ddi-python SDK to v2.0 (#6)
+
+      - Updated GitHub Actions workflows for testing and release (#3, #4, #10)
+
+      - Updated runtime.yml to include Ansible version in meta directory (#8)
+
+      - Added missing tests for various modules (#43)
+
+
+
+    modules:
+
+    - description: Manage SSHFP records on Universal DDI.
+      name: sshfp_record
+      namespace: ''
+
+    - description: Manage DTC LBDN configurations on Universal DDI.
+      name: dtc_lbdn
+      namespace: ''
+
+    - description: Manage DTC policies on Universal DDI.
+      name: dtc_policy
+      namespace: ''
+
+    - description: Manage ICMP health checks for DTC on Universal DDI.
+      name: dtc_icmp_health_check
+      namespace: ''
+
+    - description: Manage TCP health checks for DTC on Universal DDI.
+      name: dtc_tcp_health_check
+      namespace: ''
+
+    - description: Manage DTC pools on Universal DDI.
+      name: dtc_pool
+      namespace: ''
+
+    - description: Manage SNMP health checks and SNMP user security models for DTC on Universal DDI.
+      name: dtc_snmp_health_check
+      namespace: ''
+
+    - description: Manage DTC servers on Universal DDI.
+      name: dtc_server
+      namespace: ''
+
+    - description: Manage Anycast hosts on Universal DDI.
+      name: anycast_host
+      namespace: ''
+
+    - description: Manage DHCP hosts on Universal DDI.
+      name: dhcp_host
+      namespace: ''
+
+    - description: Manage DHCP option groups on Universal DDI.
+      name: dhcp_option_group
+      namespace: ''
+
+    - description: Manage DHCP option spaces on Universal DDI.
+      name: dhcp_option_space
+      namespace: ''
+
+    - description: Manage DHCP fixed addresses and next available fixed addresses on Universal DDI.
+      name: dhcp_fixed_address
+      namespace: ''
+
+    - description: Manage DHCP HA configurations on Universal DDI.
+      name: dhcp_ha
+      namespace: ''
+
+    - description: Manage DHCP servers and configuration profiles on Universal DDI.
+      name: dhcp_server
+      namespace: ''
+
+    - description: Manage cloud discovery providers on Universal DDI.
+      name: cloud_discovery_provider
+      namespace: ''
+
+    - description: Manage IPAM federated blocks on Universal DDI.
+      name: ipam_federated_block
+      namespace: ''
+
+    - description: Manage IPAM federated realms on Universal DDI.
+      name: ipam_federated_realm
+      namespace: ''
+
+    - description: Manage IPAM federation for existing IPAM objects on Universal DDI.
+      name: ipam_federation
+      namespace: ''
+
+    - description: Manage bulk copy operations for DNS views on Universal DDI.
+      name: dns_view_bulk_copy
+      namespace: ''
+
+    - description: Manage Anycast configurations on Universal DDI.
+      name: anycast_config
+      namespace: ''
+
+
+    release_date: '2026-06-30'
