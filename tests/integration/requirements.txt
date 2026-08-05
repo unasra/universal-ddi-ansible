@@ -1,1 +1,1 @@
-universal-ddi-python-client >= 0.4.0
+universal-ddi-python-client >= 0.2.0
